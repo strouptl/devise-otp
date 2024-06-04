@@ -2,6 +2,10 @@
 
 ## UNRELEASED
 
+Update spelling and capitalization of Two-Factor Authentication for consistency;
+
+## UNRELEASED
+
 Summary: Add reset token action, and hide/repurpose disable token action
 
 Details:
