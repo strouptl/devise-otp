@@ -2,6 +2,15 @@
 
 ## UNRELEASED
 
+Fix regression related due to warden session scope usage
+
+Details:
+- Correct warden session usage for refresh\_credentials hook and helper methods (requires scope to be specified)
+- Add Admin model and AdminPosts controller to dummy app for testing;
+- Add tests to confirm resolution;
+
+## UNRELEASED
+
 Update spelling and capitalization of Two-Factor Authentication for consistency;
 
 ## UNRELEASED
@@ -32,7 +41,6 @@ Breaking Changes (config/locales/en.yml):
 - Move/Update
   - disable\_explain > reset\_explain
   - disable\_explain\_warn > reset\_explain\_warn
->>>>>>> spelling_consistency
 
 ## UNRELEASED
 
