@@ -2,6 +2,10 @@
 
 ## UNRELEASED
 
+Update spelling and capitalization of Two-Factor Authentication for consistency;
+
+## UNRELEASED
+
 Utilize native Warden redirect for redirecting to OTP credentials form.
 
 Changes:
@@ -10,6 +14,25 @@ Changes:
 - Unnest "challenge", "recovery", and token fields in OTP credentials form;
 - Cleanup variable setters in otp\_credentials controller;
 - Delete custom "sessions" hook (no longer needed);
+
+## UNRELEASED
+
+Summary: Add reset token action, and hide/repurpose disable token action
+
+Details:
+- Add reset token action to disable OTP, reset token secret, and redirect to otp_tokens#edit to re-enable with new token secret;
+- Update disable action to preserve the existing token secret (since the reset action now accomplishes this functionality);
+- Hide disable button when mandatory OTP;
+- Move disable button to bottom of page;
+
+Breaking Changes (config/locales/en.yml):
+- Add:
+  - reset\_link
+  - successfully\_reset\_otp
+- Move/Update
+  - disable\_explain > reset\_explain
+  - disable\_explain\_warn > reset\_explain\_warn
+>>>>>>> spelling_consistency
 
 ## UNRELEASED
 
