@@ -18,7 +18,7 @@ class ActionDispatch::IntegrationTest
 
   def enable_otp_and_sign_in_with_otp
     enable_otp_and_sign_in.tap do |user|
-      fill_in "user_token", with: ROTP::TOTP.new(user.otp_auth_secret).at(Time.now)
+      fill_in "token", with: ROTP::TOTP.new(user.otp_auth_secret).at(Time.now)
       click_button "Submit Token"
     end
   end
@@ -39,7 +39,7 @@ class ActionDispatch::IntegrationTest
   end
 
   def otp_challenge_for(user)
-    fill_in "user_token", with: ROTP::TOTP.new(user.otp_auth_secret).at(Time.now)
+    fill_in "token", with: ROTP::TOTP.new(user.otp_auth_secret).at(Time.now)
     click_button "Submit Token"
   end
 
